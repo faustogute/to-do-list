@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Tareas from "./components/Tareas";
+import AddTarea from "./components/AddTarea";
 
 function App() {
   const [tareas, setTareas] = useState([
@@ -19,6 +20,11 @@ function App() {
     },
   ]);
 
+  // Agregar Tarea
+  const addTarea = (tarea) => {
+    console.log(tarea);
+  };
+
   // Borrar una Tarea
   const deleteTarea = (id) => {
     setTareas(tareas.filter((tarea) => tarea.id !== id));
@@ -36,6 +42,7 @@ function App() {
   return (
     <div className="container">
       <Header titulo="Tareas" />
+      <AddTarea onAdd={addTarea} />
       {tareas.length > 0 ? (
         <Tareas
           tareas={tareas}
