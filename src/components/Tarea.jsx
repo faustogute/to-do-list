@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
 const Tarea = ({ tarea, onDelete, onToggle }) => {
   return (
     <div
-      className={`task ${tarea.done ? "terminado" : ""}`}
+      className={`${tarea.done ? "task terminado" : "task"}`}
       onDoubleClick={() => onToggle(tarea.id)}
     >
       <h3>
