@@ -9,6 +9,7 @@ const AddTarea = ({ onAdd }) => {
     e.preventDefault();
     if (!texto) {
       alert("Por favor introduce una tarea");
+      return;
     }
 
     onAdd({ texto, fecha, done });

@@ -1,4 +1,4 @@
-const Boton = ({ color, text, onClick }) => {
+const Button = ({ color, text, onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -10,4 +10,4 @@ const Boton = ({ color, text, onClick }) => {
   );
 };
 
-export default Boton;
+export default Button;
